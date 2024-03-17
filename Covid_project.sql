@@ -39,11 +39,6 @@ from PortfolioProject..covid_19_data$
 Group by [Country/Region]
 order by HighestInfectionCount desc
 
-
-
-
-
-
 -- Looking at Countries with the highest confirmed cases and a minimum number of deaths
 SELECT [Country/Region],MAX(Confirmed) AS HighestInfectionCount,MAX(Deaths) as DeathsCount,
        MAX((Deaths / NULLIF(Confirmed, 0)) * 100) AS MaxDeaths_Percentage
